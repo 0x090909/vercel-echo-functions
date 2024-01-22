@@ -15,7 +15,7 @@
         },
         "version": "1.0"
     },
-    "host": "https://vercel-echo-functions.vercel.app",
+    "host": "vercel-echo-functions.vercel.app",
     "basePath": "/",
     "paths": {
         "/device/{platform}": {
