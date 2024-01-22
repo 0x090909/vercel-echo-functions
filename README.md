@@ -10,6 +10,7 @@ Each file has to implement a function with the following header:
 
 <code>func HandlerFunction(w http.ResponseWriter, r *http.Request)</code> 
 
+The handler creates a new instance of echo and setsup all the nedded routes.
 ```
 {
     server := echo.New()
