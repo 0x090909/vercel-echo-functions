@@ -34,7 +34,7 @@ func HandlerSwagger(w http.ResponseWriter, r *http.Request) {
 
 	mainGroup := server.Group("/swagger")
 
-	mainGroup.GET("/swagger/*", echoSwagger.WrapHandler)
+	mainGroup.GET("/*", echoSwagger.WrapHandler)
 
 	server.ServeHTTP(w, r)
 }
