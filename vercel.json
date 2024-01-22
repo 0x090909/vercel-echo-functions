@@ -2,7 +2,13 @@
   "routes": [
     { "src": "/user/(.*)", "dest": "/api/user.go" },
     { "src": "/device/(.*)", "dest": "/api/device.go" },
-    { "src": "/index.html", "dest": "/api/swagger.go" }
+    { "src": "/swagger/(.*)", "dest": "/api/swagger.go" }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "https://vercel-echo-functions.vercel.app/swagger/index.html"
+    }
   ]
 
 }
