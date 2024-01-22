@@ -19,7 +19,7 @@ import (
 //	@license.name	Apache 2.0
 //	@license.url	http://www.apache.org/licenses/LICENSE-2.0.html
 
-//	@host		https://vercel-echo-functions.vercel.app
+//	@host		vercel-echo-functions.vercel.app
 //	@BasePath	/
 
 //	@securitydefinitions.apikey	ApiKeyAuth

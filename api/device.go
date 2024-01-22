@@ -15,7 +15,7 @@ func HandlerDevice(w http.ResponseWriter, r *http.Request) {
 
 	mainGroup := server.Group("/device")
 
-	mainGroup.GET("/", GETDevices)
+	mainGroup.GET("/:platform", GETDevices)
 
 	server.ServeHTTP(w, r)
 }
