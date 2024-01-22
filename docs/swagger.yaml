@@ -1,8 +1,19 @@
 basePath: /
+definitions:
+  api.Device:
+    properties:
+      location:
+        type: string
+      name:
+        type: string
+    required:
+    - location
+    - name
+    type: object
 externalDocs:
   description: OpenAPI
   url: https://swagger.io/resources/open-api/
-host: https://vercel-echo-functions.vercel.app/
+host: https://vercel-echo-functions.vercel.app
 info:
   contact:
     email: support@swagger.io
@@ -15,7 +26,31 @@ info:
   termsOfService: http://swagger.io/terms/
   title: Vercel OpenAPI Spec
   version: "1.0"
-paths: {}
+paths:
+  /device/{platform}:
+    get:
+      description: Get list of devices
+      parameters:
+      - description: platform
+        enum:
+        - "1"
+        - "2"
+        in: path
+        name: platform
+        required: true
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.Device'
+        "500":
+          description: Internal Server Error
+      security:
+      - ApiKeyAuth: []
+      summary: Get list of devices
+      tags:
+      - Devices
 securityDefinitions:
   ApiKeyAuth:
     in: header

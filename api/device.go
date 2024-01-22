@@ -32,7 +32,6 @@ func HandlerDevice(w http.ResponseWriter, r *http.Request) {
 //	@Failure		500			{object}	nil
 //	@Router			/device/{platform} [get]
 //	@Security		ApiKeyAuth
-
 func GETDevices(c echo.Context) error {
 	return c.HTML(200, "Hello device")
 }

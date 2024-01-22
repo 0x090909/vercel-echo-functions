@@ -15,9 +15,65 @@
         },
         "version": "1.0"
     },
-    "host": "https://vercel-echo-functions.vercel.app/",
+    "host": "https://vercel-echo-functions.vercel.app",
     "basePath": "/",
-    "paths": {},
+    "paths": {
+        "/device/{platform}": {
+            "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "Get list of devices",
+                "tags": [
+                    "Devices"
+                ],
+                "summary": "Get list of devices",
+                "parameters": [
+                    {
+                        "enum": [
+                            "1",
+                            "2"
+                        ],
+                        "type": "string",
+                        "description": "platform",
+                        "name": "platform",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/api.Device"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "api.Device": {
+            "type": "object",
+            "required": [
+                "location",
+                "name"
+            ],
+            "properties": {
+                "location": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        }
+    },
     "securityDefinitions": {
         "ApiKeyAuth": {
             "type": "apiKey",

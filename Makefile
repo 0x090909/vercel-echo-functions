@@ -1,2 +1,2 @@
 swagger:
-	swag fmt && swag init -g api/swagger.go  --requiredByDefault  # --parseInternal --parseDependency
+	swag fmt && swag init -g api/swagger.go   --parseInternal --parseDependency --dir .
