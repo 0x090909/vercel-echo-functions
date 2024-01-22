@@ -8,7 +8,8 @@ import (
 func HandlerDevice(w http.ResponseWriter, r *http.Request) {
 	server := echo.New()
 
-	server.GET("/", func(c echo.Context) error {
+	mainGroup := server.Group("/device")
+	mainGroup.GET("/", func(c echo.Context) error {
 		return c.HTML(200, "Hello device")
 	})
 

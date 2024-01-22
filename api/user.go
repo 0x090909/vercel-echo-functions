@@ -8,7 +8,8 @@ import (
 func HandlerUser(w http.ResponseWriter, r *http.Request) {
 	server := echo.New()
 
-	server.GET("/user/", func(c echo.Context) error {
+	mainGroup := server.Group("/user")
+	mainGroup.GET("/", func(c echo.Context) error {
 		return c.HTML(200, "Hello user")
 	})
 
