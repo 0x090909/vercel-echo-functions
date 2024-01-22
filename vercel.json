@@ -6,10 +6,10 @@
 
   "functions": {
     "api/user.go": {
-      "runtime": "vercel/go@latest"
+      "runtime": "vercel/go@3.0.5"
     },
     "api/device.go": {
-      "runtime": "vercel/go@latest"
+      "runtime": "vercel/go@3.0.5"
     }
 
   }
