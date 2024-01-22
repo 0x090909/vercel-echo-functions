@@ -8,15 +8,15 @@ import (
 func Handler(w http.ResponseWriter, r *http.Request) {
 	server := echo.New()
 
-	server.GET("/user/", func(c echo.Context) error {
+	server.GET("/user", func(c echo.Context) error {
 		return c.HTML(200, "Hello index")
 	})
 
-	server.GET("/user/all", func(c echo.Context) error {
+	server.GET("/user_all", func(c echo.Context) error {
 		return c.HTML(200, "Hello all")
 	})
 
-	server.GET("/user/gone", func(c echo.Context) error {
+	server.GET("/user_gone", func(c echo.Context) error {
 		return c.HTML(200, "Hello gone")
 	})
 
