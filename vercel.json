@@ -2,15 +2,6 @@
   "routes": [
     { "src": "/user/(.*)", "dest": "/api/user.go" },
     { "src": "/device/(.*)", "dest": "/api/device.go" }
-  ],
+  ]
 
-  "functions": {
-    "api/user.go": {
-      "runtime": "vercel/go@0.2.0"
-    },
-    "api/device.go": {
-      "runtime": "vercel/go@0.2.0"
-    }
-
-  }
 }
