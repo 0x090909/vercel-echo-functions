@@ -2,7 +2,7 @@
   "routes": [
     { "src": "/user/(.*)", "dest": "/api/user.go" },
     { "src": "/device/(.*)", "dest": "/api/device.go" },
-    { "src": "/swagger/(.*)", "dest": "/api/swagger.go" }
+    { "src": "/index.html", "dest": "/api/swagger.go" }
   ]
 
 }
